@@ -15,6 +15,7 @@
         <module>framework</module>
         <module>application</module>
         <module>client</module>
+        <module>server</module>
     </modules>
 
     <properties>
