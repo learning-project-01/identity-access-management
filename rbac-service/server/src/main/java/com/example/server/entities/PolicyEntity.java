@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.rbac.service.client.models.Statement;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
 @Document(collection = "policies")
@@ -14,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @NoArgsConstructor
 public class PolicyEntity {
 
-    @MongoId(FieldType.OBJECT_ID)
+    @MongoId
     private String policyId;
 
     private String name;

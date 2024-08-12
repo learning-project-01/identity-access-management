@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserPoliciesEntity {
+
     @MongoId
     private String userId;
 
