@@ -15,5 +15,5 @@ public class UserPoliciesEntity {
     @MongoId
     private String userId;
 
-    private String[] policyIds;
+    private String[] policyNames;
 }

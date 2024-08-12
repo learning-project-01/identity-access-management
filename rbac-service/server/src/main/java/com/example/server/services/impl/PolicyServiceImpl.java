@@ -16,7 +16,7 @@ import java.util.Optional;
 public class PolicyServiceImpl implements PolicyService {
 
     @Autowired
-    MongoTemplate mongoTemplate;
+    private MongoTemplate mongoTemplate;
 
     @Override
     public PolicyEntity savePolicy(PolicyEntity policy) {
@@ -26,6 +26,13 @@ public class PolicyServiceImpl implements PolicyService {
     @Override
     public Optional<PolicyEntity> getPolicyById(String policyId) {
         Query query = new Query(Criteria.where("policyId").is(policyId));
+        PolicyEntity policy = mongoTemplate.findOne(query, PolicyEntity.class);
+        return Optional.ofNullable(policy);
+    }
+
+    @Override
+    public Optional<PolicyEntity> getPolicyByNames(String policyName) {
+        Query query = new Query(Criteria.where("name").is(policyName));
         PolicyEntity policy = mongoTemplate.findOne(query, PolicyEntity.class);
         return Optional.ofNullable(policy);
     }
@@ -49,5 +56,4 @@ public class PolicyServiceImpl implements PolicyService {
         Query query = new Query(Criteria.where("policyId").is(policyId));
         return mongoTemplate.remove(query, PolicyEntity.class).getDeletedCount() > 0;
     }
-
 }
