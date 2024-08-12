@@ -11,5 +11,5 @@ public class UserPolicies {
 
     private String userId;
 
-    private String[]  policyIds;
+    private String[] policyIds;
 }
