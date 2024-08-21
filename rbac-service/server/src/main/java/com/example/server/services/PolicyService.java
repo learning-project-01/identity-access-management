@@ -10,6 +10,8 @@ public interface PolicyService {
 
     Optional<PolicyEntity> getPolicyById(String policyId);
 
+    Optional<PolicyEntity> getPolicyByNames(String policyName);
+
     List<PolicyEntity> getAllPolicies();
 
     Optional<PolicyEntity> updatePolicy(String policyId, PolicyEntity updatedPolicy);

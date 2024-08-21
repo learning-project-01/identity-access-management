@@ -7,13 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Policy {
+public class UserPolicies {
 
-    private String policyId;
+    private String userId;
 
-    private String name;
-    
-    private String policyAlias;
-
-    private Statement[] statements;
+    private String[] policyIds;
 }

@@ -3,20 +3,17 @@ package com.example.server.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.rbac.service.client.models.Statement;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-@Document(collection = "policies")
 @Data
+@Document(collection = "user-policies")
 @AllArgsConstructor
 @NoArgsConstructor
-public class PolicyEntity {
+public class UserPoliciesEntity {
 
     @MongoId
-    private String policyId;
+    private String userId;
 
-    private String name;
-
-    private Statement[] statements;
+    private String[] policyNames;
 }
