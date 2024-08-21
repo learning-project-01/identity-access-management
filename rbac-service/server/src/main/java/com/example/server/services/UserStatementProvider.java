@@ -4,7 +4,7 @@ import org.rbac.service.client.models.Statement;
 
 import java.util.List;
 
-public interface UserContextService {
+public interface UserStatementProvider {
     List<Statement> getUserStatements();
 
     void setUserStatements(List<Statement> userStatements);

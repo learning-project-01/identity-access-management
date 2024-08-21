@@ -12,6 +12,8 @@ public class Policy {
     private String policyId;
 
     private String name;
+    
+    private String policyAlias;
 
     private Statement[] statements;
 }

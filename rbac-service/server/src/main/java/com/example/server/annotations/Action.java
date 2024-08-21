@@ -9,4 +9,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Action {
     String name();
+
+    String resourceId() default "na";
+
+    String effect() default "allow";
 }

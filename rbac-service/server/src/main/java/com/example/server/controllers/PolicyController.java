@@ -2,7 +2,6 @@ package com.example.server.controllers;
 
 import com.example.server.entities.PolicyEntity;
 import com.example.server.services.PolicyService;
-import com.example.server.annotations.Action;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +14,6 @@ public class PolicyController {
 
     @Autowired
     private PolicyService policyService;
-    @Action(name = "Policy:create")
     @PostMapping
     public PolicyEntity createPolicy(@RequestBody PolicyEntity policy) {
         return policyService.savePolicy(policy);
